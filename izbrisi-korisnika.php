@@ -1,7 +1,6 @@
 <?php 
 	include('functions.php');
 	include("conf.php");
-	include('index.php');
 
 
 	$currentId = $_GET['id'];
