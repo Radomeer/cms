@@ -50,13 +50,21 @@
 		$email = trim($_POST['email']);
 
 		
-
+		// Validations 
 		$fields_array = array("username", "password");
-
 		foreach($fields_array as $field) {
 			$value = trim($_POST[$field]);
 			if(!has_presence($value)) {
-				$errors[$field] = ucfirst($field) . "cant be blank";
+				$errors[$field] = ucfirst($field) . "can't be blank";
+			}
+		}
+
+		// Using an assoc. array
+		$fields_with_max_lenghts = array("username" => 30, "password" => 8);
+		foreach($fields_with_max_lenghts as $field => $max) {
+			$value = trim($_POST[$field]);
+			if(!has_max_lenght($value, $max)) {
+				$errors[$field] = ucfirst($field) . " can't be blank"
 			}
 		}
 
