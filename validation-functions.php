@@ -7,7 +7,7 @@
 
 
 
-	function has_max_lenght($value, $max) {
+	function has_max_length($value, $max) {
 		return strlen($value) <= $max;
 	}
 
@@ -20,7 +20,7 @@
 	function form_errors($errors=array()) {
 		$output = "";
 
-		if(!empty($errros)) {
+		if(!empty($errors)) {
 			$output .= "<div class = \"error\">";
 			$output .= "Please fix the following errors:";
 			$output .= "<ul>";

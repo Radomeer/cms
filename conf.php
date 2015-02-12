@@ -1,13 +1,12 @@
 <?php
 	
-	//Create connection 
-	
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
-	$dbname = "korisnici";
+	//Creating database connection 
+	DEFINE("DB_SERVER", "localhost");
+	DEFINE("DB_USER", "root");
+	DEFINE("DB_PASS", "");
+	DEFINE("DB_NAME", "korisnici");
 
-	$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+	$connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
 	//check connection
 

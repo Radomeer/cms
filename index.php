@@ -45,6 +45,8 @@
 
 	if(isset($_POST['submit'])) {
 
+
+
 		$username = trim($_POST["username"]);
 		$password = trim($_POST['password']);
 		$email = trim($_POST['email']);
@@ -63,8 +65,8 @@
 		$fields_with_max_lenghts = array("username" => 30, "password" => 8);
 		foreach($fields_with_max_lenghts as $field => $max) {
 			$value = trim($_POST[$field]);
-			if(!has_max_lenght($value, $max)) {
-				$errors[$field] = ucfirst($field) . " can't be blank"
+			if(!has_max_length($value, $max)) {
+				$errors[$field] = ucfirst($field) . " its too long";
 			}
 		}
 
